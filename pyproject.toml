@@ -1,0 +1,19 @@
+
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "redjax", email = "none@none.com"},
+]
+dependencies = []
+requires-python = ">=3.11"
+license = {text = "MIT"}
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ruff>=0.0.280",
+    "black>=23.7.0",
+    "pytest>=7.4.0",
+    "pre-commit>=3.3.3",
+]

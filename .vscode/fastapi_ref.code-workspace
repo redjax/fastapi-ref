@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "git_root",
+			"path": ".."
+		},
+		{
+			"path": "../example_apps/app_1"
+		}
+	],
+	"settings": {
+		"[python]": {
+			"editor.defaultFormatter": "ms-python.black-formatter"
+		},
+		"python.formatting.provider": "none"
+	}
+}
