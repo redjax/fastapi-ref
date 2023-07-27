@@ -7,12 +7,11 @@ authors = [
     {name = "redjax", email = "none@none.com"},
 ]
 dependencies = [
-    "red-utils>=0.1.5",
+    "red-utils>=0.1.7",
     "dynaconf>=3.2.0",
     "stackprinter>=0.2.10",
     "fastapi>=0.100.0",
     "uvicorn[standard]>=0.23.1",
-    "pydantic>=2.1.1",
     "pydantic-settings>=2.0.2",
     "python-multipart>=0.0.6",
 ]
@@ -22,8 +21,8 @@ license = {text = "MIT"}
 [tool.pdm.dev-dependencies]
 dev = [
     "ruff>=0.0.280",
-    "pytest>=7.4.0",
     "black>=23.7.0",
+    "pytest>=7.4.0",
 ]
 
 [tool.pdm.scripts]

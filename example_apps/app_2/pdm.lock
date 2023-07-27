@@ -229,7 +229,7 @@ summary = "YAML parser and emitter for Python"
 
 [[package]]
 name = "red-utils"
-version = "0.1.6"
+version = "0.1.7"
 requires_python = ">=3.11"
 summary = "Collection of utility scripts/functions that I use frequently."
 dependencies = [
@@ -330,7 +330,7 @@ summary = "A small Python utility to set file creation time on Windows"
 lock_version = "4.2"
 cross_platform = true
 groups = ["default", "dev"]
-content_hash = "sha256:d2223597edf87c03d78cad30541fdb532c56a762a1281f0b943e04b116737f78"
+content_hash = "sha256:8b54f7c89eec4c4985a5d26952f69f2789448d0ada2e999c408485ab04308ea8"
 
 [metadata.files]
 "annotated-types 0.5.0" = [
@@ -700,9 +700,9 @@ content_hash = "sha256:d2223597edf87c03d78cad30541fdb532c56a762a1281f0b943e04b11
     {url = "https://files.pythonhosted.org/packages/f1/26/55e4f21db1f72eaef092015d9017c11510e7e6301c62a6cfee91295d13c6/PyYAML-6.0.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:69b023b2b4daa7548bcfbd4aa3da05b3a74b772db9e23b982788168117739938"},
     {url = "https://files.pythonhosted.org/packages/fe/88/def2e57fe740544f2eefb1645f1d6e0094f56c00f4eade708140b6137ead/PyYAML-6.0.1-cp36-cp36m-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:704219a11b772aea0d8ecd7058d0082713c3562b4e271b849ad7dc4a5c90c13c"},
 ]
-"red-utils 0.1.6" = [
-    {url = "https://files.pythonhosted.org/packages/95/26/b2ed72743af36cd008dba50918b136441087c95395672f712c81bc600ce6/red_utils-0.1.6.tar.gz", hash = "sha256:ee50fdee2cd89fc30413433b1325542b8eafe9196be3677318b1983a78a7a32a"},
-    {url = "https://files.pythonhosted.org/packages/ef/dc/e9a45d6a292b52a48cfb2f775ab301b006311d1c70dfda8c52eb14102c9b/red_utils-0.1.6-py3-none-any.whl", hash = "sha256:f9167aae8b4737c389c93ca2c2443142cdccc4db29ba14d8fbe128906292478f"},
+"red-utils 0.1.7" = [
+    {url = "https://files.pythonhosted.org/packages/71/23/454d0daefbdeab3489a68945eda764f0ee0c03988f63a5578ecf6a6be9f7/red_utils-0.1.7.tar.gz", hash = "sha256:b2fc57ff31551f30f0daefadeeb07e7bed81124a5ed6ee3d87ef5c9ee3be432c"},
+    {url = "https://files.pythonhosted.org/packages/be/e4/b01730773d9020e78f603be58d471883e333f13445019e87b90a4fc10b2e/red_utils-0.1.7-py3-none-any.whl", hash = "sha256:eca97c7eadb69d6bc5c6a972dfa8cf492618003e33e802b2faeb1206ae73bc87"},
 ]
 "ruff 0.0.280" = [
     {url = "https://files.pythonhosted.org/packages/02/e0/d938bac9685633d642b84cf00fe48ff5e2b323c1a2b6bb53eccf4bbd74b9/ruff-0.0.280-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:7a37dab70114671d273f203268f6c3366c035fe0c8056614069e90a65e614bfc"},
