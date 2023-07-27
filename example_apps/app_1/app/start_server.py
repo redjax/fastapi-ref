@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import sys
 
 import stackprinter
@@ -6,9 +8,9 @@ stackprinter.set_excepthook(style="darkbg2")
 
 from pathlib import Path
 
+from config import api_settings, settings
 from loguru import logger as log
 from pydantic import BaseModel
-from config import settings, api_settings
 from red_utils.loguru_utils import init_logger
 import uvicorn
 

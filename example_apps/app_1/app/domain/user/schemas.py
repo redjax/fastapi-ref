@@ -1,5 +1,6 @@
-from pydantic import BaseModel, Field
+from __future__ import annotations
 
+from pydantic import BaseModel, Field
 
 class UserGroup(BaseModel):
     number: int | None = Field(
@@ -10,7 +11,7 @@ class UserGroup(BaseModel):
 
 class UserBase(BaseModel):
     """Nested models:
-    https://fastapi.tiangolo.com/tutorial/body-nested-models/
+    https://fastapi.tiangolo.com/tutorial/body-nested-models/.
 
     Return type & data filtering docs:
     https://fastapi.tiangolo.com/tutorial/response-model/#return-type-and-data-filtering

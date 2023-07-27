@@ -17,3 +17,11 @@ dev = [
     "pytest>=7.4.0",
     "pre-commit>=3.3.3",
 ]
+
+[tool.pdm.scripts]
+
+## Format scripts
+# Check only, don't fix
+check = { cmd = "black ." }
+#  Check and fix
+format = { cmd = "ruff check . --fix" }

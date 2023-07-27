@@ -1,33 +1,32 @@
-"""
-Example FastAPI app created by following the docs.
+"""Example FastAPI app created by following the docs.
 
 I've spiced it up a bit by separating things into modules as I go, using some
 of my own favorite libraries (like Dynaconf instead of Pydantic for settings management).
 """
+from __future__ import annotations
+
 from typing import Annotated
+
 import stackprinter
 
 stackprinter.set_excepthook(style="darkbg2")
 
-from red_utils.loguru_utils import init_logger
-from loguru import logger as log
-
-from config import settings, api_settings
-from fastapi import FastAPI, status, Body, Form, HTTPException, Depends, Header
-from fastapi.middleware.cors import CORSMiddleware
-
-from fastapi.responses import JSONResponse
-
-from domain.user import schemas as user_schemas
+from config import api_settings, settings
 from domain.item import schemas as item_schemas
-
-## Build an enum of tags
-#  https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags-with-enums
-from lib.constants import Tags
+from domain.user import schemas as user_schemas
+from fastapi import Body, Depends, FastAPI, Form, Header, HTTPException, status
 
 ## Convert objects to JSON
 #  https://fastapi.tiangolo.com/tutorial/encoder/
 from fastapi.encoders import jsonable_encoder
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
+
+## Build an enum of tags
+#  https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags-with-enums
+from lib.constants import Tags
+from loguru import logger as log
+from red_utils.loguru_utils import init_logger
 
 init_logger()
 
@@ -55,7 +54,7 @@ fake_items_db = [{"item_name": "Foo"}, {"item_name": "Bar"}, {"item_name": "Baz"
 
 class CommonQueryParams:
     """Use a class as a dependency.
-    https://fastapi.tiangolo.com/tutorial/dependencies/classes-as-dependencies/
+    https://fastapi.tiangolo.com/tutorial/dependencies/classes-as-dependencies/.
 
     Inject with:
       async def some_function(commons: Annotated[CommonQueryParams, Depends(CommonQueryParams)])
@@ -221,7 +220,6 @@ async def update_item(item_id: str, item: item_schemas.Item):
 
     Overwrite the original with the copy.
     """
-
     ## Example "database", a dict of dict objects
     #  The objects are varying degrees of complete,
     #  to demo different PATCH requests.

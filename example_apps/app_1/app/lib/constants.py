@@ -2,8 +2,9 @@
 
 Use globals sparingly.
 """
-from enum import Enum
+from __future__ import annotations
 
+from enum import Enum
 
 ## Build an enum of tags
 #  https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags-with-enums

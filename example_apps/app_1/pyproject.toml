@@ -30,7 +30,7 @@ dev = [
 
 ## Format scripts
 # Check only, don't fix
-ruff = { cmd = "ruff check ." }
+check = { cmd = "black ." }
 #  Check and fix
 format = { cmd = "ruff check . --fix" }
 
