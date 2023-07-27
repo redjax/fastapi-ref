@@ -1,0 +1,7 @@
+[prod]
+debug = false
+log_level = "INFO"
+
+[dev]
+debug = true
+log_level = "DEBUG"
