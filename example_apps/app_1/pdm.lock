@@ -229,7 +229,7 @@ summary = "YAML parser and emitter for Python"
 
 [[package]]
 name = "red-utils"
-version = "0.1.5"
+version = "0.1.7"
 requires_python = ">=3.11"
 summary = "Collection of utility scripts/functions that I use frequently."
 dependencies = [
@@ -700,9 +700,9 @@ content_hash = "sha256:d2223597edf87c03d78cad30541fdb532c56a762a1281f0b943e04b11
     {url = "https://files.pythonhosted.org/packages/f1/26/55e4f21db1f72eaef092015d9017c11510e7e6301c62a6cfee91295d13c6/PyYAML-6.0.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:69b023b2b4daa7548bcfbd4aa3da05b3a74b772db9e23b982788168117739938"},
     {url = "https://files.pythonhosted.org/packages/fe/88/def2e57fe740544f2eefb1645f1d6e0094f56c00f4eade708140b6137ead/PyYAML-6.0.1-cp36-cp36m-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:704219a11b772aea0d8ecd7058d0082713c3562b4e271b849ad7dc4a5c90c13c"},
 ]
-"red-utils 0.1.5" = [
-    {url = "https://files.pythonhosted.org/packages/60/ce/ef9c4b5695a4ad77b8594016b5e4ea7ae1027d99962b16dbab8248f05219/red_utils-0.1.5.tar.gz", hash = "sha256:b270cfde333334caeed97a20bd6975d4fd223ffa5809704fc8ec662dde220368"},
-    {url = "https://files.pythonhosted.org/packages/9b/e7/9249c8f335b63a0d9be3604a57ee9712832ea3f30641e1bef2d96ef65887/red_utils-0.1.5-py3-none-any.whl", hash = "sha256:0bc6212f17049da30c13289abda288fbd406801efd3739ec3b9d9c5d7699e79c"},
+"red-utils 0.1.7" = [
+    {url = "https://files.pythonhosted.org/packages/71/23/454d0daefbdeab3489a68945eda764f0ee0c03988f63a5578ecf6a6be9f7/red_utils-0.1.7.tar.gz", hash = "sha256:b2fc57ff31551f30f0daefadeeb07e7bed81124a5ed6ee3d87ef5c9ee3be432c"},
+    {url = "https://files.pythonhosted.org/packages/be/e4/b01730773d9020e78f603be58d471883e333f13445019e87b90a4fc10b2e/red_utils-0.1.7-py3-none-any.whl", hash = "sha256:eca97c7eadb69d6bc5c6a972dfa8cf492618003e33e802b2faeb1206ae73bc87"},
 ]
 "ruff 0.0.280" = [
     {url = "https://files.pythonhosted.org/packages/02/e0/d938bac9685633d642b84cf00fe48ff5e2b323c1a2b6bb53eccf4bbd74b9/ruff-0.0.280-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:7a37dab70114671d273f203268f6c3366c035fe0c8056614069e90a65e614bfc"},
