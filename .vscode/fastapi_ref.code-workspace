@@ -6,6 +6,9 @@
 		},
 		{
 			"path": "../example_apps/app_1"
+		},
+		{
+			"path": "../example_apps/app_2"
 		}
 	],
 	"settings": {
