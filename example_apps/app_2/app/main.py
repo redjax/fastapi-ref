@@ -14,10 +14,18 @@ from fastapi.responses import JSONResponse
 from loguru import logger as log
 from red_utils.loguru_utils import init_logger
 
+from routers import api_router
+from dependencies import Base, get_query_token, get_token_header, get_engine
+
 init_logger()
 
+# log.info("Creating Base metadata")
+# create_base_metadata(sqla_base, engine=sqla_engine)
+engine = get_engine()
+Base.metadata.create_all(engine)
+
 ## Initialize FastAPI app
-app = FastAPI()
+app = FastAPI(dependencies=[Depends(get_query_token)])
 
 app.add_middleware(
     CORSMiddleware,
@@ -26,6 +34,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(api_router.router)
 
 
 @app.get(
