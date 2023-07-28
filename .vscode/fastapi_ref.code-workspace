@@ -9,6 +9,9 @@
 		},
 		{
 			"path": "../example_apps/app_2"
+		},
+		{
+			"path": "../example_apps/app_3"
 		}
 	],
 	"settings": {
