@@ -1,0 +1,4 @@
+**/app/conf/*.local.toml
+**/app/conf/*.toml
+**/app/conf/**/*.local.toml
+**/app/conf/**/*.toml
