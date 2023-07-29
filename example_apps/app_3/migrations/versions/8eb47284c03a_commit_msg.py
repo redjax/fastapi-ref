@@ -1,17 +1,18 @@
-"""${commit_msg}
+"""${commit_msg}.
 
 Revision ID: 8eb47284c03a
 Revises: 4f1e72884ad3
 Create Date: 2023-07-29 02:43:31.269219
 
 """
+from __future__ import annotations
+
 from alembic import op
 import sqlalchemy as sa
 
-
 # revision identifiers, used by Alembic.
-revision = '8eb47284c03a'
-down_revision = '4f1e72884ad3'
+revision = "8eb47284c03a"
+down_revision = "4f1e72884ad3"
 branch_labels = None
 depends_on = None
 

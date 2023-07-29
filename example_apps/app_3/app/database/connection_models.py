@@ -1,8 +1,9 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from pathlib import Path
 
 import sqlalchemy as sa
-
 
 @dataclass
 class saConnectionBase:

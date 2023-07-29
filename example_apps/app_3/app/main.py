@@ -1,36 +1,41 @@
-import stackprinter
+from __future__ import annotations
 
 from typing import Annotated
 
+import stackprinter
+
 stackprinter.set_excepthook(style="darkbg2")
 
-from dependencies import settings, api_settings, db_config, ENV, engine, SessionLocal
 from dependencies import (
+    ENV,
+    Base,
+    SessionLocal,
+    api_settings,
     create_base_metadata,
-    get_engine,
+    db_config,
     debug_metadata_obj,
+    engine,
+    get_db,
+    get_engine,
     get_session,
+    saSQLiteConnection,
+    settings,
 )
-from dependencies import saSQLiteConnection, Base, get_db
-from sqlalchemy.orm import Session
-
 from domain.item import Item, ItemCreate, ItemModel
-
-from red_utils.loguru_utils import init_logger
+from fastapi import Body, Depends, FastAPI, HTTPException, status
+from fastapi.encoders import jsonable_encoder
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
+from loguru import logger as log
 from red_utils.fastapi_utils import (
-    healthcheck,
     fix_api_docs,
+    healthcheck,
     tags_metadata,
     update_tags_metadata,
 )
-from loguru import logger as log
-
-from fastapi import Body, Depends, FastAPI, HTTPException, status
-from fastapi.encoders import jsonable_encoder
-from fastapi.responses import JSONResponse
-from fastapi.middleware.cors import CORSMiddleware
-
+from red_utils.loguru_utils import init_logger
 from routers import api_router
+from sqlalchemy.orm import Session
 
 init_logger()
 

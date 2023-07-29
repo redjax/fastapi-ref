@@ -1,15 +1,16 @@
+from __future__ import annotations
+
 import json
 
 from pathlib import Path
 from typing import Optional
 
+from dependencies import Session, get_db
+from domain.item import Item, ItemCreate, ItemModel, crud
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from loguru import logger as log
-
-from domain.item import ItemModel, Item, ItemCreate, crud
-from dependencies import get_db, Session
 
 router = APIRouter(prefix="/items", tags=["items"])
 

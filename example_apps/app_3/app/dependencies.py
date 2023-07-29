@@ -1,17 +1,18 @@
-from config import settings, api_settings, db_settings, ENV
+from __future__ import annotations
+
+from config import ENV, api_settings, db_settings, settings
 from database import (
-    create_base_metadata,
-    saSQLiteConnection,
-    get_engine,
-    debug_metadata_obj,
-    get_session,
     Base,
+    create_base_metadata,
+    debug_metadata_obj,
+    get_engine,
+    get_session,
+    saSQLiteConnection,
     scoped_session,
 )
-
 import sqlalchemy as sa
-from sqlalchemy.orm import Session, sessionmaker
 
+from sqlalchemy.orm import Session, sessionmaker
 
 db_config = saSQLiteConnection(database=db_settings.db_database)
 engine = get_engine(connection=db_config, db_type=db_settings.db_type, echo=True)

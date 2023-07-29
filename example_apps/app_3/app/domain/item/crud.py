@@ -1,6 +1,8 @@
-from . import ItemModel, ItemCreate, Item
-from sqlalchemy.orm import Session
+from __future__ import annotations
 
+from . import Item, ItemCreate, ItemModel
+
+from sqlalchemy.orm import Session
 
 def validate_db(db: Session = None) -> Session:
     if not db:
