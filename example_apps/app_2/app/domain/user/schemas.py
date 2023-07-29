@@ -1,6 +1,8 @@
-from pydantic import BaseModel
+from __future__ import annotations
+
 from .. import item_schemas
 
+from pydantic import BaseModel
 
 class UserBase(BaseModel):
     email: str

@@ -7,15 +7,14 @@ import stackprinter
 stackprinter.set_excepthook(style="darkbg2")
 
 from config import api_settings, settings
+from dependencies import Base, get_engine, get_query_token, get_token_header
 from fastapi import Body, Depends, FastAPI, Form, Header, HTTPException, status
 from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from loguru import logger as log
 from red_utils.loguru_utils import init_logger
-
 from routers import api_router
-from dependencies import Base, get_query_token, get_token_header, get_engine
 
 init_logger()
 

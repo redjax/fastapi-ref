@@ -1,5 +1,6 @@
-from pydantic import BaseModel
+from __future__ import annotations
 
+from pydantic import BaseModel
 
 class ItemBase(BaseModel):
     title: str

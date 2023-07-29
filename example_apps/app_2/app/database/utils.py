@@ -1,5 +1,6 @@
-from sqlalchemy import create_engine
+from __future__ import annotations
 
+from sqlalchemy import create_engine
 
 def get_engine(conn_str: str = "sqlite://", echo: bool = True):
     try:

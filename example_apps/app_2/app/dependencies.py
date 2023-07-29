@@ -1,8 +1,9 @@
+from __future__ import annotations
+
 from typing import Annotated
 
-from fastapi import Header, HTTPException
-
 from database import Base, get_engine
+from fastapi import Header, HTTPException
 
 sqla_base = Base()
 sqla_engine = get_engine()
