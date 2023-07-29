@@ -37,7 +37,7 @@ services:
       DYNACONF_DB_USERNAME: ${DB_USERNAME:-postgres}
       DYNACONF_DB_PASSWORD: ${DB_PASSWORD:-postgres}
       DYNACONF_DB_PORT: ${DB_PORT:-5432}
-      DYNACONF_DB_DATABASE: ${DB_DATABASE:-demo}
+      DYNACONF_DB_DATABASE: ${DB_DATABASE:-postgres}
       ## Force Dynaconf to load vars from env before settings.toml files
       DYNACONF_ALWAYS_LOAD_ENV_VARS: 1
     # ports:

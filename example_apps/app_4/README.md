@@ -11,6 +11,10 @@ https://praciano.com.br/fastapi-and-async-sqlalchemy-20-with-pytest-done-right.h
 * When using a Postgres database, the database must already exist
   * You can create a script to create the database in `db/postgres/pg_entrypoint/`, or use the attached PGAdmin container to open the web UI and create a database.
     * This database must match the ENV var `DYNACONF_DB_DATABASE` value
+* On first clone:
+  * Copy `.env.example` -> `.env`
+  * Copy `env_files/app.env.example` -> `env_files/app.env`
+  * Run `docker compose build && docker compose up -d`
 
 ### Alembic
 
