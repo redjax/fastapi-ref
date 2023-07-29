@@ -1,0 +1,65 @@
+
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "redjax", email = "none@none.com"},
+]
+dependencies = [
+    "sqlalchemy>=2.0.19",
+    "fastapi>=0.100.1",
+    "uvicorn[standard]>=0.23.1",
+    "stackprinter>=0.2.10",
+    "python-multipart>=0.0.6",
+    "dynaconf>=3.2.0",
+    "red-utils>=0.1.10",
+]
+requires-python = ">=3.11"
+license = {text = "MIT"}
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ruff>=0.0.280",
+    "black>=23.7.0",
+    "pytest>=7.4.0",
+    "alembic>=1.11.1",
+]
+
+[tool.pdm.scripts]
+
+## Format scripts
+# Check only, don't fix
+check = { cmd = "black ." }
+#  Check and fix
+format = { cmd = "ruff check . --fix" }
+
+## Upgrade Alembic head after making model changes
+alembic-upgrade.cmd = "alembic upgrade head"
+
+## Run migrations
+#  Prompts for a commit message
+alembic-migrate.shell = "read -p 'Commit message: ' commit_msg && pdm run alembic revision --autogenerate -m '${commit_msg}'"
+
+migrations.shell = "pdm run alembic upgrade head && read -p 'Commit message: ' commit_msg && pdm run alembic revision --autogenerate -m '${commit_msg}'"
+
+## Start scripts
+start-dev.shell = "cd app && pdm run python main.py"
+start-dev.env = { ENV = "dev" }
+
+start.shell = "cd app && pdm run python main.py"
+start.env = { ENV = "prod" }
+
+start-server-dev.shell = "cd app && pdm run python start_server.py"
+start-server-dev.env = { ENV = "dev" }
+
+start-server.shell = "cd app && pdm run python start_server.py"
+start-server.env = { ENV = "prod" }
+
+## Export requirement scripts
+#  Export production requirements
+export = { cmd = "pdm export --prod -o requirements.txt --without-hashes" }
+#  Export only development requirements
+export-dev = { cmd = "pdm export -d -o requirements.dev.txt --without-hashes" }
+## Uncomment if/when using a CI group
+# export-ci = {cmd = "pdm export -G ci -o requirements.ci.txt --without-hashes"}
