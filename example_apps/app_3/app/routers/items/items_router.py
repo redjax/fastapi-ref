@@ -14,6 +14,38 @@ from dependencies import get_db, Session
 router = APIRouter(prefix="/items", tags=["items"])
 
 
+@router.post(
+    "/",
+    summary="Create a new Item",
+    response_model=Item,
+    response_model_exclude_unset=True,
+    description="Create a new Item and add it to the database by converting the input ItemCreate schema into an ItemModel SQLAlchemy model.",
+)
+def post_create_new_item(item: ItemCreate, db: Session = Depends(get_db)):
+    db_item_success = crud.create_item(item, db=db)
+
+    if not db_item_success:
+        return JSONResponse(
+            status_code=status.HTTP_304_NOT_MODIFIED,
+            content={"info": "Item already exists."},
+        )
+
+    return db_item_success
+
+
+@router.put("/id/{id}")
+def update_item_in_db(id: int, item: ItemCreate, db: Session = Depends(get_db)):
+    db_item_update_success = crud.update_item_by_id(id=id, item=item, db=db)
+
+    if not db_item_update_success:
+        return JSONResponse(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            content={"error": f"There was a problem updating Item with ID [{id}]."},
+        )
+
+    return db_item_update_success
+
+
 @router.get(
     "/all",
     summary="Return all Items from the database",
@@ -65,38 +97,6 @@ def get_item_by_id_in_db(id: int, db: Session = Depends(get_db)):
         )
 
     return db_item_success
-
-
-@router.post(
-    "/",
-    summary="Create a new Item",
-    response_model=Item,
-    response_model_exclude_unset=True,
-    description="Create a new Item and add it to the database by converting the input ItemCreate schema into an ItemModel SQLAlchemy model.",
-)
-def post_create_new_item(item: ItemCreate, db: Session = Depends(get_db)):
-    db_item_success = crud.create_item(item, db=db)
-
-    if not db_item_success:
-        return JSONResponse(
-            status_code=status.HTTP_304_NOT_MODIFIED,
-            content={"info": "Item already exists."},
-        )
-
-    return db_item_success
-
-
-@router.put("/id/{id}")
-def update_item_in_db(id: int, item: ItemCreate, db: Session = Depends(get_db)):
-    db_item_update_success = crud.update_item_by_id(id=id, item=item, db=db)
-
-    if not db_item_update_success:
-        return JSONResponse(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            content={"error": f"There was a problem updating Item with ID [{id}]."},
-        )
-
-    return db_item_update_success
 
 
 @router.delete("/id/{id}", summary="Delete an Item from the database by ID.")
