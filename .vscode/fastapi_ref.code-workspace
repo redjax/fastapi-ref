@@ -12,6 +12,9 @@
 		},
 		{
 			"path": "../example_apps/app_3"
+		},
+		{
+			"path": "../example_apps/app_4"
 		}
 	],
 	"settings": {
