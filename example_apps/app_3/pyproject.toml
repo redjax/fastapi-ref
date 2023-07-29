@@ -8,13 +8,12 @@ authors = [
 ]
 dependencies = [
     "red-utils>=0.1.7",
-    "dynaconf>=3.2.0",
-    "stackprinter>=0.2.10",
-    "fastapi>=0.100.0",
+    "sqlalchemy>=2.0.19",
+    "fastapi>=0.100.1",
     "uvicorn[standard]>=0.23.1",
-    "pydantic>=2.1.1",
-    "pydantic-settings>=2.0.2",
+    "stackprinter>=0.2.10",
     "python-multipart>=0.0.6",
+    "dynaconf>=3.2.0",
 ]
 requires-python = ">=3.11"
 license = {text = "MIT"}
@@ -22,8 +21,8 @@ license = {text = "MIT"}
 [tool.pdm.dev-dependencies]
 dev = [
     "ruff>=0.0.280",
-    "pytest>=7.4.0",
     "black>=23.7.0",
+    "pytest>=7.4.0",
 ]
 
 [tool.pdm.scripts]
@@ -35,7 +34,12 @@ check = { cmd = "black ." }
 format = { cmd = "ruff check . --fix" }
 
 ## Start scripts
-#  Run main app or script. Launches from app/
+start-dev.shell = "cd app && pdm run python main.py"
+start-dev.env = { ENV = "dev" }
+
+start.shell = "cd app && pdm run python main.py"
+start.env = { ENV = "prod" }
+
 start-server-dev.shell = "cd app && pdm run python start_server.py"
 start-server-dev.env = { ENV = "dev" }
 

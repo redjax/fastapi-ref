@@ -1,0 +1,17 @@
+app_title = ""
+app_description = ""
+app_version = "0.1.0"
+
+app_host = "0.0.0.0"
+app_port = "8000"
+app_reload = true
+app_debug = true
+
+
+[prod]
+debug = false
+log_level = "INFO"
+
+[dev]
+debug = true
+log_level = "DEBUG"
