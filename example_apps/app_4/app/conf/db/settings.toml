@@ -1,0 +1,6 @@
+db_type = "sqlite"
+db_host = ""
+db_username = ""
+db_password = ""
+db_port = ""
+db_database = ".db/demo.sqlite"
