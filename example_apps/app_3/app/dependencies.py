@@ -9,6 +9,9 @@ from database import (
     scoped_session,
 )
 
+import sqlalchemy as sa
+from sqlalchemy.orm import Session, sessionmaker
+
 
 db_config = saSQLiteConnection(database=db_settings.db_database)
 engine = get_engine(connection=db_config, db_type=db_settings.db_type, echo=True)
