@@ -65,7 +65,7 @@ summary = "The dynamic configurator for your Python Project"
 
 [[package]]
 name = "fastapi"
-version = "0.100.0"
+version = "0.100.1"
 requires_python = ">=3.7"
 summary = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
 dependencies = [
@@ -191,16 +191,6 @@ requires_python = ">=3.7"
 summary = ""
 dependencies = [
     "typing-extensions!=4.7.0,>=4.6.0",
-]
-
-[[package]]
-name = "pydantic-settings"
-version = "2.0.2"
-requires_python = ">=3.7"
-summary = "Settings management using Pydantic"
-dependencies = [
-    "pydantic>=2.0.1",
-    "python-dotenv>=0.21.0",
 ]
 
 [[package]]
@@ -346,7 +336,7 @@ summary = "A small Python utility to set file creation time on Windows"
 lock_version = "4.2"
 cross_platform = true
 groups = ["default", "dev"]
-content_hash = "sha256:82639eb11a96d813e701cbc3ad9feaac8899d2170074d76eea187e5739cb6233"
+content_hash = "sha256:e1d2050101245e9e19ecf1f616e1493deb5c02600dea0c6a6b9aefa087b91386"
 
 [metadata.files]
 "annotated-types 0.5.0" = [
@@ -401,9 +391,9 @@ content_hash = "sha256:82639eb11a96d813e701cbc3ad9feaac8899d2170074d76eea187e573
     {url = "https://files.pythonhosted.org/packages/41/0c/dd30f938dd43e51602a5071fe1cb0707526205ca3ab17d4031842b2c7896/dynaconf-3.2.0.tar.gz", hash = "sha256:a28442d12860a44fad5fa1d9db918c710cbfc971e8b7694697429fb8f1c3c620"},
     {url = "https://files.pythonhosted.org/packages/5c/94/948c637300b91e00c92b75ff0876f8cd1b90f2efd6ff327e6b2382fd5dbf/dynaconf-3.2.0-py2.py3-none-any.whl", hash = "sha256:791d8029c74548d57b0266aabd6557ebfff6540bffd7f58ba700f577c047c0f5"},
 ]
-"fastapi 0.100.0" = [
-    {url = "https://files.pythonhosted.org/packages/49/f5/048206823aae9b3a4a61ba6b7a1dd1de36bd4c0a0283f2efb1f1f2289c8a/fastapi-0.100.0-py3-none-any.whl", hash = "sha256:271662daf986da8fa98dc2b7c7f61c4abdfdccfb4786d79ed8b2878f172c6d5f"},
-    {url = "https://files.pythonhosted.org/packages/65/e0/f9d77b3a1569e2217abf260b0b1462401736973d1c5d3d335f6f2009daa2/fastapi-0.100.0.tar.gz", hash = "sha256:acb5f941ea8215663283c10018323ba7ea737c571b67fc7e88e9469c7eb1d12e"},
+"fastapi 0.100.1" = [
+    {url = "https://files.pythonhosted.org/packages/66/23/5db1adf057fc47f6575c4f317b98882a9312f59a7ec555ae38ca854aef42/fastapi-0.100.1-py3-none-any.whl", hash = "sha256:ec6dd52bfc4eff3063cfcd0713b43c87640fefb2687bbbe3d8a08d94049cdf32"},
+    {url = "https://files.pythonhosted.org/packages/b2/72/6af07ac2417c6c8bf13069cac3673a5e4628247c62316b0f65a2eaea15c3/fastapi-0.100.1.tar.gz", hash = "sha256:522700d7a469e4a973d92321ab93312448fbe20fca9c8da97effc7e7bc56df23"},
 ]
 "greenlet 2.0.2" = [
     {url = "https://files.pythonhosted.org/packages/07/ef/6bfa2ea34f76dea02833d66d28ae7cf4729ddab74ee93ee069c7f1d47c4f/greenlet-2.0.2-cp37-cp37m-macosx_10_15_x86_64.whl", hash = "sha256:d5508f0b173e6aa47273bdc0a0b5ba055b59662ba7c7ee5119528f466585526b"},
@@ -719,10 +709,6 @@ content_hash = "sha256:82639eb11a96d813e701cbc3ad9feaac8899d2170074d76eea187e573
     {url = "https://files.pythonhosted.org/packages/eb/90/b13e6d8783a8eca1392fd4dcebea953e4c52647cf257c09b37243b595a04/pydantic_core-2.4.0-pp310-pypy310_pp73-musllinux_1_1_x86_64.whl", hash = "sha256:382f0baa044d674ad59455a5eff83d7965572b745cc72df35c52c2ce8c731d37"},
     {url = "https://files.pythonhosted.org/packages/fb/7f/d65603736fd23b2cd049634f7713669e6f83f17c181aea5da5688d88b9c7/pydantic_core-2.4.0-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:4665f7ed345012a8d2eddf4203ef145f5f56a291d010382d235b94e91813f88a"},
     {url = "https://files.pythonhosted.org/packages/fd/e1/a80c4f5ceae5378dba083820ab7a4018b451019a25a1a2add80533f1836d/pydantic_core-2.4.0-cp312-cp312-manylinux_2_24_s390x.whl", hash = "sha256:01947ad728f426fa07fcb26457ebf90ce29320259938414bc0edd1476e75addb"},
-]
-"pydantic-settings 2.0.2" = [
-    {url = "https://files.pythonhosted.org/packages/9c/3e/3311eeab406db6116e7f2d4ed9b05c2811282143efa55feb12cc513a8b84/pydantic_settings-2.0.2-py3-none-any.whl", hash = "sha256:6183a2abeab465d5a3ab69758e9a22d38b0cc2ba193f0b85f6971a252ea630f6"},
-    {url = "https://files.pythonhosted.org/packages/c7/bc/2ab68f8159ee87bd7ee2924fdc4ecea901ff48e4216f745d937f5c3f2fd5/pydantic_settings-2.0.2.tar.gz", hash = "sha256:342337fff50b23585e807a86dec85037900972364435c55c2fc00d16ff080539"},
 ]
 "pytest 7.4.0" = [
     {url = "https://files.pythonhosted.org/packages/33/b2/741130cbcf2bbfa852ed95a60dc311c9e232c7ed25bac3d9b8880a8df4ae/pytest-7.4.0-py3-none-any.whl", hash = "sha256:78bf16451a2eb8c7a2ea98e32dc119fd2aa758f1d5d66dbf0a59d69a3969df32"},

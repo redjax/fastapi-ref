@@ -1,0 +1,10 @@
+api_title = "Example FastAPI App 2"
+api_description = "A second example API built with FastAPI."
+api_version = "0.1.0"
+
+api_host = "0.0.0.0"
+api_port = "8005"
+api_reload = true
+api_debug = true
+
+api_origins = ["*"]
