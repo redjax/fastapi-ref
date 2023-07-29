@@ -3,6 +3,15 @@ https://praciano.com.br/fastapi-and-async-sqlalchemy-20-with-pytest-done-right.h
 
 ## Notes
 
+### Running in Docker
+
+* To get Dynaconf to load data from the environment, `environments=True` must be set on the Dyanconf `settings` object (in `app/config.py`)
+  * When setting environment variables in the `docker-compose.yml` file, prepend `DYNACONF_` to any variable to load in the app
+    * i.e. `APP_TITLE` env var should be declared in `docker-compose.yml` as `DYNACONF_APP_TITLE=${APP_TITLE:-Default title}`
+* When using a Postgres database, the database must already exist
+  * You can create a script to create the database in `db/postgres/pg_entrypoint/`, or use the attached PGAdmin container to open the web UI and create a database.
+    * This database must match the ENV var `DYNACONF_DB_DATABASE` value
+
 ### Alembic
 
 **IMPORTANT**: After every model change (i.e. adding/removing fields, changing type, etc), you must run `alembic upgrade head` before running an `alembic revision`.

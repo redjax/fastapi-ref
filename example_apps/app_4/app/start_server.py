@@ -15,6 +15,7 @@ from red_utils.loguru_utils import init_logger
 import uvicorn
 
 ENV = settings.env
+log.debug(f"App ENV: {ENV}")
 
 if __name__ == "__main__":
     ## If this file was run directly, initialize logger.

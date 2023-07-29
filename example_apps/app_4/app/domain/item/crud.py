@@ -41,7 +41,7 @@ def create_item(item: ItemCreate = None, db: Session = None):
             if db_user:
                 return False
             else:
-                new_item = ItemModel(name=item.name, description=item.description)
+                new_item = ItemModel(**item.model_dump())
                 sess.add(new_item)
                 sess.commit()
 

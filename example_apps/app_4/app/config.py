@@ -14,6 +14,8 @@ settings_root: str = "conf"
 ## Load default/"main" settings.toml file
 settings: LazySettings = Dynaconf(
     envvar_prefix="DYNACONF",
+    environments=True,
+    ENVVAR_PREFIX_FOR_DYNACONF=True,
     settings_files=[f"{settings_root}/settings.toml", f"{settings_root}/.secrets.toml"],
 )
 
