@@ -225,7 +225,7 @@ summary = "YAML parser and emitter for Python"
 
 [[package]]
 name = "red-utils"
-version = "0.1.7"
+version = "0.1.9"
 requires_python = ">=3.11"
 summary = "Collection of utility scripts/functions that I use frequently."
 dependencies = [
@@ -233,6 +233,7 @@ dependencies = [
     "httpx>=0.24.1",
     "loguru>=0.7.0",
     "msgpack>=1.0.5",
+    "sqlalchemy>=2.0.19",
 ]
 
 [[package]]
@@ -764,9 +765,9 @@ content_hash = "sha256:e1d2050101245e9e19ecf1f616e1493deb5c02600dea0c6a6b9aefa08
     {url = "https://files.pythonhosted.org/packages/f1/26/55e4f21db1f72eaef092015d9017c11510e7e6301c62a6cfee91295d13c6/PyYAML-6.0.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:69b023b2b4daa7548bcfbd4aa3da05b3a74b772db9e23b982788168117739938"},
     {url = "https://files.pythonhosted.org/packages/fe/88/def2e57fe740544f2eefb1645f1d6e0094f56c00f4eade708140b6137ead/PyYAML-6.0.1-cp36-cp36m-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:704219a11b772aea0d8ecd7058d0082713c3562b4e271b849ad7dc4a5c90c13c"},
 ]
-"red-utils 0.1.7" = [
-    {url = "https://files.pythonhosted.org/packages/71/23/454d0daefbdeab3489a68945eda764f0ee0c03988f63a5578ecf6a6be9f7/red_utils-0.1.7.tar.gz", hash = "sha256:b2fc57ff31551f30f0daefadeeb07e7bed81124a5ed6ee3d87ef5c9ee3be432c"},
-    {url = "https://files.pythonhosted.org/packages/be/e4/b01730773d9020e78f603be58d471883e333f13445019e87b90a4fc10b2e/red_utils-0.1.7-py3-none-any.whl", hash = "sha256:eca97c7eadb69d6bc5c6a972dfa8cf492618003e33e802b2faeb1206ae73bc87"},
+"red-utils 0.1.9" = [
+    {url = "https://files.pythonhosted.org/packages/c6/5d/b20e4b7e154b6d71d7ecbed9bd94084f1d167f7d6145f93016593b44bab1/red_utils-0.1.9.tar.gz", hash = "sha256:8a383127f458e028371845ea30cfb2c882dfe7edbbf0b14ac1d1bd0f72a65ef1"},
+    {url = "https://files.pythonhosted.org/packages/ea/03/485a3b8db7e197ba3fe5e0f95d6b6f88d9ad5afebcfbb98f8b405be71f14/red_utils-0.1.9-py3-none-any.whl", hash = "sha256:cc553e9a1091aaa539535b19cd8144962aee09f7712160c34ef021ccd09c0094"},
 ]
 "ruff 0.0.280" = [
     {url = "https://files.pythonhosted.org/packages/02/e0/d938bac9685633d642b84cf00fe48ff5e2b323c1a2b6bb53eccf4bbd74b9/ruff-0.0.280-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:7a37dab70114671d273f203268f6c3366c035fe0c8056614069e90a65e614bfc"},

@@ -65,7 +65,7 @@ summary = "The dynamic configurator for your Python Project"
 
 [[package]]
 name = "fastapi"
-version = "0.100.0"
+version = "0.100.1"
 requires_python = ">=3.7"
 summary = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
 dependencies = [
@@ -235,7 +235,7 @@ summary = "YAML parser and emitter for Python"
 
 [[package]]
 name = "red-utils"
-version = "0.1.7"
+version = "0.1.9"
 requires_python = ">=3.11"
 summary = "Collection of utility scripts/functions that I use frequently."
 dependencies = [
@@ -243,6 +243,7 @@ dependencies = [
     "httpx>=0.24.1",
     "loguru>=0.7.0",
     "msgpack>=1.0.5",
+    "sqlalchemy>=2.0.19",
 ]
 
 [[package]]
@@ -401,9 +402,9 @@ content_hash = "sha256:82639eb11a96d813e701cbc3ad9feaac8899d2170074d76eea187e573
     {url = "https://files.pythonhosted.org/packages/41/0c/dd30f938dd43e51602a5071fe1cb0707526205ca3ab17d4031842b2c7896/dynaconf-3.2.0.tar.gz", hash = "sha256:a28442d12860a44fad5fa1d9db918c710cbfc971e8b7694697429fb8f1c3c620"},
     {url = "https://files.pythonhosted.org/packages/5c/94/948c637300b91e00c92b75ff0876f8cd1b90f2efd6ff327e6b2382fd5dbf/dynaconf-3.2.0-py2.py3-none-any.whl", hash = "sha256:791d8029c74548d57b0266aabd6557ebfff6540bffd7f58ba700f577c047c0f5"},
 ]
-"fastapi 0.100.0" = [
-    {url = "https://files.pythonhosted.org/packages/49/f5/048206823aae9b3a4a61ba6b7a1dd1de36bd4c0a0283f2efb1f1f2289c8a/fastapi-0.100.0-py3-none-any.whl", hash = "sha256:271662daf986da8fa98dc2b7c7f61c4abdfdccfb4786d79ed8b2878f172c6d5f"},
-    {url = "https://files.pythonhosted.org/packages/65/e0/f9d77b3a1569e2217abf260b0b1462401736973d1c5d3d335f6f2009daa2/fastapi-0.100.0.tar.gz", hash = "sha256:acb5f941ea8215663283c10018323ba7ea737c571b67fc7e88e9469c7eb1d12e"},
+"fastapi 0.100.1" = [
+    {url = "https://files.pythonhosted.org/packages/66/23/5db1adf057fc47f6575c4f317b98882a9312f59a7ec555ae38ca854aef42/fastapi-0.100.1-py3-none-any.whl", hash = "sha256:ec6dd52bfc4eff3063cfcd0713b43c87640fefb2687bbbe3d8a08d94049cdf32"},
+    {url = "https://files.pythonhosted.org/packages/b2/72/6af07ac2417c6c8bf13069cac3673a5e4628247c62316b0f65a2eaea15c3/fastapi-0.100.1.tar.gz", hash = "sha256:522700d7a469e4a973d92321ab93312448fbe20fca9c8da97effc7e7bc56df23"},
 ]
 "greenlet 2.0.2" = [
     {url = "https://files.pythonhosted.org/packages/07/ef/6bfa2ea34f76dea02833d66d28ae7cf4729ddab74ee93ee069c7f1d47c4f/greenlet-2.0.2-cp37-cp37m-macosx_10_15_x86_64.whl", hash = "sha256:d5508f0b173e6aa47273bdc0a0b5ba055b59662ba7c7ee5119528f466585526b"},
@@ -778,9 +779,9 @@ content_hash = "sha256:82639eb11a96d813e701cbc3ad9feaac8899d2170074d76eea187e573
     {url = "https://files.pythonhosted.org/packages/f1/26/55e4f21db1f72eaef092015d9017c11510e7e6301c62a6cfee91295d13c6/PyYAML-6.0.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:69b023b2b4daa7548bcfbd4aa3da05b3a74b772db9e23b982788168117739938"},
     {url = "https://files.pythonhosted.org/packages/fe/88/def2e57fe740544f2eefb1645f1d6e0094f56c00f4eade708140b6137ead/PyYAML-6.0.1-cp36-cp36m-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:704219a11b772aea0d8ecd7058d0082713c3562b4e271b849ad7dc4a5c90c13c"},
 ]
-"red-utils 0.1.7" = [
-    {url = "https://files.pythonhosted.org/packages/71/23/454d0daefbdeab3489a68945eda764f0ee0c03988f63a5578ecf6a6be9f7/red_utils-0.1.7.tar.gz", hash = "sha256:b2fc57ff31551f30f0daefadeeb07e7bed81124a5ed6ee3d87ef5c9ee3be432c"},
-    {url = "https://files.pythonhosted.org/packages/be/e4/b01730773d9020e78f603be58d471883e333f13445019e87b90a4fc10b2e/red_utils-0.1.7-py3-none-any.whl", hash = "sha256:eca97c7eadb69d6bc5c6a972dfa8cf492618003e33e802b2faeb1206ae73bc87"},
+"red-utils 0.1.9" = [
+    {url = "https://files.pythonhosted.org/packages/c6/5d/b20e4b7e154b6d71d7ecbed9bd94084f1d167f7d6145f93016593b44bab1/red_utils-0.1.9.tar.gz", hash = "sha256:8a383127f458e028371845ea30cfb2c882dfe7edbbf0b14ac1d1bd0f72a65ef1"},
+    {url = "https://files.pythonhosted.org/packages/ea/03/485a3b8db7e197ba3fe5e0f95d6b6f88d9ad5afebcfbb98f8b405be71f14/red_utils-0.1.9-py3-none-any.whl", hash = "sha256:cc553e9a1091aaa539535b19cd8144962aee09f7712160c34ef021ccd09c0094"},
 ]
 "ruff 0.0.280" = [
     {url = "https://files.pythonhosted.org/packages/02/e0/d938bac9685633d642b84cf00fe48ff5e2b323c1a2b6bb53eccf4bbd74b9/ruff-0.0.280-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:7a37dab70114671d273f203268f6c3366c035fe0c8056614069e90a65e614bfc"},
