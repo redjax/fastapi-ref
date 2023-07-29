@@ -16,8 +16,13 @@ from sqlalchemy.orm import Session
 
 from domain.item import Item, ItemCreate, ItemModel
 
-from red_utils.loguru_utils import init_logger  # , fix_api_docs
-from red_utils.fastapi_utils.src import healthcheck
+from red_utils.loguru_utils import init_logger
+from red_utils.fastapi_utils import (
+    healthcheck,
+    fix_api_docs,
+    tags_metadata,
+    update_tags_metadata,
+)
 from loguru import logger as log
 
 from fastapi import Body, Depends, FastAPI, HTTPException, status
@@ -25,14 +30,25 @@ from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 
+from routers import api_router
+
 init_logger()
 
 create_base_metadata(Base(), engine=engine)
 
+new_metadata = {
+    "name": "inventory",
+    "description": "Interact with Items in a database. Demo CRUD operations.",
+}
+tags_metadata = update_tags_metadata(tags_metadata, update_metadata=new_metadata)
+
 ex_item_dict: dict = {"name": "Test", "description": "Test Item"}
 log.info(f"[{ENV}] App Title: {settings.app_title}")
 
-app = FastAPI(root_path="/api/v1", servers=[{"url": "/api/v1"}])
+app = FastAPI(
+    tags_metadata=tags_metadata,
+)
+fix_api_docs(app)
 
 app.add_middleware(
     CORSMiddleware,
@@ -43,6 +59,7 @@ app.add_middleware(
 )
 
 app.include_router(healthcheck.router)
+app.include_router(api_router.router)
 
 
 @app.get(
@@ -55,30 +72,3 @@ def hello_world():
     content = JSONResponse(status_code=status.HTTP_200_OK, content=_content)
 
     return content
-
-
-@app.post(
-    "/items",
-    summary="Create a new Item",
-    response_model=Item,
-    response_model_exclude_unset=True,
-    description="Create a new Item and add it to the database by converting the input ItemCreate schema into an ItemModel SQLAlchemy model.",
-)
-def post_create_item(item: ItemCreate, db: Session = Depends(get_db)):
-    try:
-        with db as client:
-            db_user = client.query(ItemModel).where(ItemModel.name == item.name).first()
-
-            if db_user:
-                return JSONResponse(
-                    status_code=400, content={"error": "Item already exists."}
-                )
-            else:
-                new_item = ItemModel(name=item.name, description=item.description)
-                db.add(new_item)
-                db.commit()
-
-                return new_item
-
-    except Exception as exc:
-        raise Exception(f"Unhandled exception creating Item. Details: {exc}")
