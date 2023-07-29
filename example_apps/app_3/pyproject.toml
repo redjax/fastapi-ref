@@ -23,6 +23,7 @@ dev = [
     "ruff>=0.0.280",
     "black>=23.7.0",
     "pytest>=7.4.0",
+    "alembic>=1.11.1",
 ]
 
 [tool.pdm.scripts]
@@ -32,6 +33,15 @@ dev = [
 check = { cmd = "black ." }
 #  Check and fix
 format = { cmd = "ruff check . --fix" }
+
+## Upgrade Alembic head after making model changes
+alembic-upgrade.cmd = "alembic upgrade head"
+
+## Run migrations
+#  Prompts for a commit message
+alembic-migrate.shell = "read -p 'Commit message: ' commit_msg && pdm run alembic revision --autogenerate -m '${commit_msg}'"
+
+migrations.shell = "pdm run alembic upgrade head && read -p 'Commit message: ' commit_msg && pdm run alembic revision --autogenerate -m '${commit_msg}'"
 
 ## Start scripts
 start-dev.shell = "cd app && pdm run python main.py"
