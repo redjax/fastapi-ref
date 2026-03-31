@@ -6,7 +6,7 @@ anyio==3.7.1
 certifi==2023.7.22
 click==8.1.6
 diskcache==5.6.1
-dynaconf==3.2.0
+dynaconf==3.2.13
 fastapi==0.100.1
 greenlet==2.0.2
 h11==0.14.0
